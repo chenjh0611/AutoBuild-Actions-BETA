@@ -21,7 +21,7 @@ Firmware_Diy_Core() {
 	Default_Flag=AUTO
 	# 固件标签 (名称后缀), 适用不同配置文件, AUTO: [自动识别]
 	
-	Default_IP="192.168.1.1"
+	Default_IP="192.168.2.1"
 	# 固件 IP 地址
 	
 	Default_Title="Powered by AutoBuild-Actions"
@@ -232,4 +232,17 @@ EOF
 		# ReleaseDL https://api.github.com/repos/Loyalsoldier/v2ray-rules-dat/releases/latest geoip.dat ${BASE_FILES}/usr/v2ray
 	;;
 	esac
+
+	# 修改插件名字
+	# sed -i 's/"网络存储"/"NAS"/g' `grep "网络存储" -rl ./`
+	# sed -i 's/"Turbo ACC 网络加速"/"网络加速"/g' `grep "Turbo ACC 网络加速" -rl ./`
+	# sed -i 's/"实时流量监测"/"流量"/g' `grep "实时流量监测" -rl ./`
+	# sed -i 's/"KMS 服务器"/"KMS激活"/g' `grep "KMS 服务器" -rl ./`
+	# sed -i 's/"TTYD 终端"/"命令窗"/g' `grep "TTYD 终端" -rl ./`
+	# sed -i 's/"USB 打印服务器"/"打印服务"/g' `grep "USB 打印服务器" -rl ./`
+	# sed -i 's/"Web 管理"/"Web"/g' `grep "Web 管理" -rl ./`
+	# sed -i 's/"管理权"/"改密码"/g' `grep "管理权" -rl ./`
+	# sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
+	# sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
+	# sed -i 's/"usb3disable"/"USB3设置"/g' `grep "usb3disable" -rl ./`
 }
